@@ -45,7 +45,7 @@ This project is under a lincense of Creative Commons Attribution-NonCommercial 4
   git clone https://github.com/cocodataset/cocoapi.git
   cd cocoapi/PythonAPI
   python setup.py build_ext install
-  原作者给的是Linux系统的cocoapi地址，这里给一个 .[Windows].(https://github.com/hipriya8899/windows-cocoapi).的。
+  原作者给的是Linux系统的cocoapi地址，这里给一个 [Windows] (https://github.com/hipriya8899/windows-cocoapi).的。
   同样键入： cd cocoapi/PythonAPI
   python setup.py build_ext install
 
@@ -63,7 +63,7 @@ This project is under a lincense of Creative Commons Attribution-NonCommercial 4
 
   # build
   python setup.py build develop
-  这里报错AT_CHECK未定义，参考[这里](https://github.com/daniilidis-group/neural_renderer/issues/94)的解决方案，将maskrcnn_benchmark\csrc\cuda下的deform_conv_cuda.cu及deform_pool_cuda.cu的AT_CHECK全部替换为AT_ASSERT，至此编译完成，在完成预训练模型下载及路径设置后可直接运行demo。
+  这里报错AT_CHECK未定义，参考 [这里] (https://github.com/daniilidis-group/neural_renderer/issues/94)的解决方案，将maskrcnn_benchmark\csrc\cuda下的deform_conv_cuda.cu及deform_pool_cuda.cu的AT_CHECK全部替换为AT_ASSERT，至此编译完成，在完成预训练模型下载及路径设置后可直接运行demo。
 
 
   unset INSTALL_DIR
