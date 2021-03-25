@@ -1,4 +1,5 @@
 # Mask TextSpotter v3
+从人家那叉过来的，因为是windows上部署的，安装过程报错及修改做一下记录。
 This is a PyTorch implemntation of the ECCV 2020 paper [Mask TextSpotter v3](https://arxiv.org/abs/2007.09482). Mask TextSpotter v3 is an end-to-end trainable scene text spotter that adopts a Segmentation Proposal Network (SPN) instead of an RPN. Mask TextSpotter v3 significantly improves robustness to rotations, aspect ratios, and shapes.
 
 ## Relationship to Mask TextSpotter
@@ -38,11 +39,14 @@ This project is under a lincense of Creative Commons Attribution-NonCommercial 4
   conda install pytorch torchvision cudatoolkit=10.0 -c pytorch
 
   export INSTALL_DIR=$PWD
-
+  上面的安装都没有问题，下面有些报错。
   # install pycocotools
   cd $INSTALL_DIR
   git clone https://github.com/cocodataset/cocoapi.git
   cd cocoapi/PythonAPI
+  python setup.py build_ext install
+  原作者给的是Linux系统的cocoapi地址，这里给一个 [Windows](https://github.com/hipriya8899/windows-cocoapi).的。
+  同样键入： cd cocoapi/PythonAPI
   python setup.py build_ext install
 
   # install apex
@@ -50,6 +54,7 @@ This project is under a lincense of Creative Commons Attribution-NonCommercial 4
   git clone https://github.com/NVIDIA/apex.git
   cd apex
   python setup.py install --cuda_ext --cpp_ext
+  原安装命令报错了，这里直接键入：python setup.py install
 
   # clone repo
   cd $INSTALL_DIR
@@ -58,6 +63,7 @@ This project is under a lincense of Creative Commons Attribution-NonCommercial 4
 
   # build
   python setup.py build develop
+  这里报错AT_CHECK未定义，参考[这里](https://github.com/daniilidis-group/neural_renderer/issues/94)的解决方案，将maskrcnn_benchmark\csrc\cuda下的deform_conv_cuda.cu及deform_pool_cuda.cu的AT_CHECK全部替换为AT_ASSERT，至此编译完成，在完成预训练模型下载及路径设置后可直接运行demo。
 
 
   unset INSTALL_DIR
