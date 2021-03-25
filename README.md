@@ -21,7 +21,7 @@ This project is under a lincense of Creative Commons Attribution-NonCommercial 4
 - CUDA >= 9.0 (10.0.130 is recommended)
 
 
-```bash
+bash
   # first, make sure that your conda is setup properly with the right environment
   # for that, check that `which conda`, `which pip` and `which python` points to the
   # right path. From a clean conda env, this is what you need to do
@@ -63,11 +63,12 @@ This project is under a lincense of Creative Commons Attribution-NonCommercial 4
 
   # build
   python setup.py build develop
-  这里报错AT_CHECK未定义，参考 [这里] (https://github.com/daniilidis-group/neural_renderer/issues/94)的解决方案，将maskrcnn_benchmark\csrc\cuda下的deform_conv_cuda.cu及deform_pool_cuda.cu的AT_CHECK全部替换为AT_ASSERT，至此编译完成，在完成预训练模型下载及路径设置后可直接运行demo。 [code](https://github.com/MhLiao/MaskTextSpotter))
+
+  这里报错AT_CHECK未定义，参考 [这里](https://github.com/daniilidis-group/neural_renderer/issues/94)的解决方案，将maskrcnn_benchmark\csrc\cuda下的deform_conv_cuda.cu及deform_pool_cuda.cu的AT_CHECK全部替换为AT_ASSERT，至此编译完成，在完成预训练模型下载及路径设置后可直接运行demo。 
 
 
   unset INSTALL_DIR
-```
+
 
 ## Models
 Download the trained model [Google Drive](https://drive.google.com/file/d/1XQsikiNY7ILgZvmvOeUf9oPDG4fTp0zs/view?usp=sharing), [BaiduYun](https://pan.baidu.com/s/1fV1RbyQ531IifdKxkScItQ) (downloading code: cnj2).
