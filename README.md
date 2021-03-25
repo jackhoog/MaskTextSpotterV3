@@ -45,7 +45,7 @@ This project is under a lincense of Creative Commons Attribution-NonCommercial 4
   git clone https://github.com/cocodataset/cocoapi.git
   cd cocoapi/PythonAPI
   python setup.py build_ext install
-  原作者给的是Linux系统的cocoapi地址，这里给一个 [Windows](https://github.com/hipriya8899/windows-cocoapi).的。
+  原作者给的是Linux系统的cocoapi地址，这里给一个 .[Windows].(https://github.com/hipriya8899/windows-cocoapi).的。
   同样键入： cd cocoapi/PythonAPI
   python setup.py build_ext install
 
