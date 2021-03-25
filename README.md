@@ -62,7 +62,7 @@ bash
   # build
   python setup.py build develop
 ```
-  原作者给的是Linux系统的cocoapi地址，这里给一个 [Windows] (https://github.com/hipriya8899/windows-cocoapi).的。
+  原作者给的是Linux系统的cocoapi地址，这里给一个[Windows](https://github.com/hipriya8899/windows-cocoapi).的。
   同样键入： cd cocoapi/PythonAPI
   python setup.py build_ext install
   
