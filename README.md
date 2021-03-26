@@ -83,6 +83,11 @@ Option: Download the model pretrain with SynthText for your quick re-implementat
 You can run a demo script for a single image inference by ```python tools/demo.py```.
 
 ## Datasets
+关于数据集，本人主要想做弯曲文本的检测识别，所以用了Total-text数据集。在训练时需注意几个地方：
+*数据集选择：configs\pretrain\seg_rec_poly_fuse_feature.yaml  62行 DATASETS：...
+*数据集位置：maskrcnn_benchmark\config\paths_catalog.py
+*数据集生成：maskrcnn_benchmark\data\datasets\total_text.py
+
 The datasets are the same as Mask TextSpotter v2.
 
 Download the ICDAR2013([Google Drive](https://drive.google.com/open?id=1sptDnAomQHFVZbjvnWt2uBvyeJ-gEl-A), [BaiduYun](https://pan.baidu.com/s/18W2aFe_qOH8YQUDg4OMZdw)) and ICDAR2015([Google Drive](https://drive.google.com/open?id=1HZ4Pbx6TM9cXO3gDyV04A4Gn9fTf2b5X), [BaiduYun](https://pan.baidu.com/s/16GzPPzC5kXpdgOB_76A3cA)) as examples.
