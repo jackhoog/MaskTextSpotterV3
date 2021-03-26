@@ -1,5 +1,6 @@
 # Mask TextSpotter v3
 从人家那叉过来的，因为是windows上部署的，安装过程报错及修改做一下记录。
+
 This is a PyTorch implemntation of the ECCV 2020 paper [Mask TextSpotter v3](https://arxiv.org/abs/2007.09482). Mask TextSpotter v3 is an end-to-end trainable scene text spotter that adopts a Segmentation Proposal Network (SPN) instead of an RPN. Mask TextSpotter v3 significantly improves robustness to rotations, aspect ratios, and shapes.
 
 ## Relationship to Mask TextSpotter
@@ -52,7 +53,7 @@ bash
   git clone https://github.com/NVIDIA/apex.git
   cd apex
   python setup.py install --cuda_ext --cpp_ext
-  原安装命令报错了，这里直接键入：python setup.py install
+  因为装了多个版本的cuda，原安装命令报错了，这里先忽略版本直接键入：python setup.py install
 
   # clone repo
   cd $INSTALL_DIR
