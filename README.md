@@ -69,6 +69,10 @@ bash
   
   最后一步build时报错AT_CHECK未定义，参考 [这里](https://github.com/daniilidis-group/neural_renderer/issues/94)的解决方案，将maskrcnn_benchmark\csrc\cuda下的deform_conv_cuda.cu及deform_pool_cuda.cu的AT_CHECK全部替换为AT_ASSERT，至此编译完成，在完成预训练模型下载及路径设置后可直接运行demo。 
 
+***
+  奇怪得很，在笔记本上安装editdiatance的时候很顺利，在台式机安装的时候报错了，这里给一个[压缩文件](https://files.pythonhosted.org/packages/12/b6/98874ea5f6280bf63f899827978d99635de91f5e9af60cc290715cd192e3/editdistance-0.5.3.tar.gz),解压后到此目录后执行python setup.py install。在执行前请删除editdistance\_editdistance.cpp中的所有日文注释。
+***
+
 
   unset INSTALL_DIR
 
